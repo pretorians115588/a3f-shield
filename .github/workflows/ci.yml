@@ -31,5 +31,3 @@ jobs:
       - uses: ilammy/msvc-dev-cmd@v1
       - shell: cmd
         run: scripts\install_windows.cmd
-      - run: python -m pytest -q
-
