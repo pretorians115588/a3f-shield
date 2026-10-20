@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+title: "A3F Shield Research Prototype"
+message: "If you use this research software, cite the repository release you used."
+type: software
+authors:
+  - name: "pretorians115588/Andrw"
+version: "0.1.0"
+date-released: 2026-10-20
+license: MIT
+
