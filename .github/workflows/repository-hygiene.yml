@@ -1,0 +1,21 @@
+name: Repository hygiene
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  hygiene:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Reject tracked generated or secret-like files
+        shell: bash
+        run: |
+          ! git ls-files | grep -E '(^|/)(\.venv|__pycache__|\.pytest_cache)(/|$)|\.(dll|so|dylib|obj|pdb|pyc|key|dpapi|sqlite|db)$'
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
