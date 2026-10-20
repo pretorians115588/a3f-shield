@@ -14,5 +14,4 @@ cc -std=c11 -O2 -fPIC -shared \
   native/threefish1024.c \
   -o native/libthreefish_native.so
 
-trap 'rm -f native/libthreefish_native.so' EXIT
 echo "Native Threefish library built for CI."
