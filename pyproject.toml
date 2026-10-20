@@ -9,7 +9,7 @@ description = "Experimental authenticated file-encryption and replay-witness res
 authors = [{name = "pretorians115588/Andrw"}]
 requires-python = ">=3.11"
 dependencies = [
-  "cryptography>=46,<50",
+  "cryptography>=50,<51",
   "argon2-cffi>=23.1,<27",
 ]
 
